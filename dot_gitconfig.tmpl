@@ -1,4 +1,3 @@
-{{ if eq (stat (joinPath .chezmoi.homeDir ".gitconfig")).size "0" -}}
 [user]
   name = {{ .name }}
   email = {{ .email }}
@@ -8,5 +7,4 @@
   gpgsign = true
 [gpg]
   format = ssh
-{{ end -}}
 {{ end -}}

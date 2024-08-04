@@ -1,4 +1,4 @@
-{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if .hypr -}}
 monitor=,preferred,auto,1
 
 $terminal = alacritty

@@ -1,5 +1,4 @@
 {{ if .bitwarden }}
-{{ if not (stat (joinPath .chezmoi.homeDir ".config" "containers" "auth.json")) -}}
 {
   "auths": {
     "docker.io": {
@@ -10,5 +9,4 @@
     }
   }
 }
-{{ end -}}
 {{ end -}}
