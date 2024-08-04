@@ -1,11 +1,11 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
+sudo pacman -S --needed --noconfirm \
 {{ range .packages.base -}}
-sudo pacman -S --needed \
   {{ . }} \
-  
 {{ end -}}
+  
 
 {{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
 git clone https://aur.archlinux.org/paru.git
