@@ -4,7 +4,7 @@
 {{- $rust := promptBoolOnce . "rust" "Install and setup rust" true -}}
 
 [data]
-  name = {{ $name | quote }}
-  email = {{ $email | quote }}
-  hypr = {{ $hypr | quote }}
-  rust = {{ $rust | quote }}
+  name = "{{ $name }}"
+  email = "{{ $email }}"
+  hypr = {{ $hypr }}
+  rust = {{ $rust }}
