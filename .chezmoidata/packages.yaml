@@ -15,6 +15,7 @@ packages:
   hypr:
     pacman:
       - blueman
+      - brightnessctl
       - fuzzel
       - hyprcursor
       - hyprland
