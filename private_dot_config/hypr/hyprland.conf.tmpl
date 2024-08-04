@@ -1,4 +1,4 @@
-{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 monitor=,preferred,auto,1
 
 $terminal = alacritty
@@ -190,4 +190,4 @@ bind = ALT, tab, cyclenext,
 bind = ALT, tab, bringactivetotop,
 
 bind = $mainMod, BackSpace, exec, nwg-bar
-{{- end -}}
+{{ end }}

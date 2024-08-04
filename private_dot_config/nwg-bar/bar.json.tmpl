@@ -1,4 +1,4 @@
-{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 [
   {
     "label": "Lock",
@@ -26,4 +26,4 @@
     "icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
   }
 ]
-{{- end -}}
+{{ end }}

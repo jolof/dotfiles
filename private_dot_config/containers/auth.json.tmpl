@@ -1,4 +1,4 @@
-{{- if not stat (joinPath .chezmoi.homeDir ".config" "containers" "auth.json") -}}
+{{ if not stat (joinPath .chezmoi.homeDir ".config" "containers" "auth.json") -}}
 {
   "auths": {
     "docker.io": {
@@ -9,4 +9,4 @@
     }
   }
 }
-{{- end -}}
+{{ end }}

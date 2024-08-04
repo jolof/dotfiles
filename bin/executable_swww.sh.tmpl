@@ -1,4 +1,4 @@
-{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
 if [[ $# -lt 1 ]] || [[ ! -d $1   ]]; then
@@ -24,4 +24,4 @@ while true; do
 			sleep $INTERVAL
 		done
 done
-{{- end -}}
+{{ end }}

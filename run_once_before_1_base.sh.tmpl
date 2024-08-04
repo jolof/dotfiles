@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.osRelease.id "arch" -}}
+{{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
 sudo pacman -S --needed \
@@ -10,4 +10,4 @@ sudo pacman -S --needed \
   rust-analyzer \
   starship \
   ttf-inconsolata-go-nerd
-{{- end -}}
+{{ end }}

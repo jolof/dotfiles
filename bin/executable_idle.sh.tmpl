@@ -1,4 +1,4 @@
-{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
 swayidle -w timeout 300 'swaylock -f -c 000000' \
@@ -7,4 +7,4 @@ swayidle -w timeout 300 'swaylock -f -c 000000' \
             timeout 1800 'systemctl suspend' \
             before-sleep 'playerctl pause' \
             after-resume 'hyprctl dispatch dpms on' &
-{{- end -}}
+{{ end }}

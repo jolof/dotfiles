@@ -1,4 +1,4 @@
-{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
 sudo pacman -S --needed \
@@ -29,3 +29,4 @@ paru -S --needed \
   nwg-bar \
   swaylock-effects-git \
   waybar-module-pacman-updates-git
+{{ end }}
