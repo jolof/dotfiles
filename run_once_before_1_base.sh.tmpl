@@ -4,7 +4,7 @@
 sudo pacman -S --needed --noconfirm \
 {{ range .packages.base -}}
   {{ . }} \
-{{ end -}}
+{{ end }}
   
 
 {{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
