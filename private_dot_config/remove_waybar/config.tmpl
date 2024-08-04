@@ -175,16 +175,17 @@
     "max-volume": 100,
     "scroll-step": 5,
     "format": "{icon}", 
+    "format-muted": "<span color='#ee3508'></span>",
     "tooltip-format": "{desc} ({volume}%)",
     "format-icons": {
-      "format-muted": "",
-        "default": [
-          "",
-          "",
-          ""
-        ]
-      },
-    "on-click": "pavucontrol"
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+    "on-click-right": "pavucontrol"
   },
   "mpris": {
     "format": "<span font='Font Awesome 6 Free'>{player_icon}</span>",
