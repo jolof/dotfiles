@@ -1,20 +1,27 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
+{{ if .packages.base.pacman -}}
+{{ range .packages.base.pacman -}}
 sudo pacman -S --needed \
-  alacritty \
-  fzf \
-  git \
-  neovim \
-  ripgrep \
-  rust \
-  rust-analyzer \
-  starship \
-  ttf-inconsolata-go-nerd
+  {{ . }} \
+  
+
+{{ end -}}
+{{ end -}}
 
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
 rm -rf paru
+
+{{ if .packages.base.aur -}}
+{{ range .packages.base.aur -}}
+sudo paru -S --needed \
+  {{ . }} \
+  
+
+{{ end -}}
+{{ end -}}
 {{ end -}}
