@@ -1,0 +1,12 @@
+{{- if not stat (joinPath .chezmoi.homeDir ".config" "containers" "auth.json") -}}
+{
+  "auths": {
+    "docker.io": {
+      "auth": {{ list (bitwarden "item" "docker.io").login.username (bitwarden "item" "docker.io").login.password | join ":" | b64enc | quote }}
+    },
+    "ghcr.io": {
+      "auth": {{ list (bitwarden "item" "ghcr.io").login.username (bitwarden "item" "ghcr.io").login.password | join ":" | b64enc | quote }}
+    }
+  }
+}
+{{- end -}}

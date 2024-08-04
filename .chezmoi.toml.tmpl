@@ -1,0 +1,10 @@
+{{- $name := promptStringOnce . "name" "Name" -}}
+{{- $email := promptStringOnce . "email" "Email" -}}
+{{- $hypr := promptBoolOnce . "hypr" "Install and setup hypr" false -}}
+{{- $rust := promptBoolOnce . "rust" "Install and setup rust" true -}}
+
+[data]
+  name = {{ $name }}
+  email = {{ $email }}
+  hypr = {{ $hypr }}
+  rust = {{ $rust }}

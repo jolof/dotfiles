@@ -1,0 +1,31 @@
+{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+#!/bin/bash
+
+sudo pacman -S --needed \
+  base-devel \
+  blueman \
+  fuzzel \
+  git \
+  hyprland \
+  nautilus \
+  network-manager-applet \
+  pacman-contrib \
+  pavucontrol \
+  swww \
+  ttf-arimo-nerd \
+  ttf-font-awesome \
+  ttf-roboto \
+  waybar
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
+rm -rf paru
+
+paru -S --needed \
+  dropbox \
+  idlehack \
+  nwg-bar \
+  swaylock-effects-git \
+  waybar-module-pacman-updates-git

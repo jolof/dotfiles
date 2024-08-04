@@ -1,0 +1,16 @@
+{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+font=Roboto-6:Bold
+
+[colors]
+background=00000046
+text=ffffffff
+match=f38ba8ff
+selection=00000046
+selection-match=f38ba8ff
+selection-text=eeeeeeff
+border=ffffff19
+
+[border]
+width=1
+radius=5
+{{- end -}}

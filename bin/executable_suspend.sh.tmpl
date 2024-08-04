@@ -1,0 +1,6 @@
+{{- if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+#!/bin/bash
+
+swaylock -f -c 000000
+systemctl suspend
+{{- end -}}
