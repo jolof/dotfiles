@@ -1,0 +1,42 @@
+{{ if eq .chezmoi.osRelease.id "arch" -}}
+#!/bin/bash
+
+sudo pacman -S --needed \
+{{ range .packages.base.pacman -}}
+  {{ . }} \
+{{ end -}}
+  
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
+rm -rf paru
+{{ end -}}
+
+{{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
+sudo pacman -S --needed \
+{{ range .packages.hypr.pacman -}}
+  {{ . }} \
+{{ end -}}
+  
+
+paru -S --needed \
+{{ range .packages.hypr.aur -}}
+  {{ . }} \
+{{ end -}}
+  
+
+{{ end -}}
+{{ if (and .rust (eq .chezmoi.osRelease.id "arch")) -}}
+pacman -S --needed \
+{{ range .packages.rust.pacman -}}
+  {{ . }} \
+{{ end -}}
+  
+
+curl --proto '=https' --tlsv1.3 -sSf https://sh.rustup.rs -o rustup.sh
+echo "Review file rustup.sh before changing to execute permissions and running:"
+echo "$ chmod +x rustup.sh"
+echo "$ ./rustup.sh"
+{{ end -}}

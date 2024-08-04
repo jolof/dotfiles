@@ -1,0 +1,40 @@
+packages:
+  base:
+    pacman:
+      - alacritty
+      - base-devel
+      - fzf
+      - git
+      - neovim
+      - pacman-contrib
+      - ripgrep
+      - rust
+      - rust-analyzer
+      - starship
+      - ttf-inconsolata-go-nerd
+  hypr:
+    pacman:
+      - blueman
+      - fuzzel
+      - hyprcursor
+      - hyprland
+      - nautilus
+      - network-manager-applet
+      - pavucontrol
+      - swww
+      - ttf-arimo-nerd
+      - ttf-font-awesome
+      - ttf-roboto
+      - waybar
+    aur:
+      - dropbox
+      - idlehack
+      - nwg-bar
+      - swaylock-effects-git
+      - waybar-module-pacman-updates-git
+  rust:
+    pacman:
+      - clang
+      - curl
+      - mold
+      - sccache
