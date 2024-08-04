@@ -1,13 +1,10 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
-{{ if .packages.base.pacman -}}
-{{ range .packages.base.pacman -}}
+{{ range .packages.base -}}
 sudo pacman -S --needed \
   {{ . }} \
   
-
-{{ end -}}
 {{ end -}}
 
 git clone https://aur.archlinux.org/paru.git
@@ -15,13 +12,4 @@ cd paru
 makepkg -si
 cd ..
 rm -rf paru
-
-{{ if .packages.base.aur -}}
-{{ range .packages.base.aur -}}
-sudo paru -S --needed \
-  {{ . }} \
-  
-
-{{ end -}}
-{{ end -}}
 {{ end -}}

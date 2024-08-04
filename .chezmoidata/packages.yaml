@@ -1,14 +1,13 @@
 packages:
   base:
-    pacman:
-      - alacritty
-      - base-devel
-      - fzf
-      - git
-      - neovim
-      - pacman-contrib
-      - ripgrep
-      - rust
-      - rust-analyzer
-      - starship
-      - ttf-inconsolata-go-nerd
+    - alacritty
+    - base-devel
+    - fzf
+    - git
+    - neovim
+    - pacman-contrib
+    - ripgrep
+    - rust
+    - rust-analyzer
+    - starship
+    - ttf-inconsolata-go-nerd
