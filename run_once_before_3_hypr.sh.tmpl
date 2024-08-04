@@ -1,9 +1,9 @@
 {{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
+paru -S --needed --noconfirm \
 {{ range .packages.hypr -}}
-paru -S --needed \
   {{ . }} \
+{{ end }}
   
-{{ end -}}
 {{ end -}}

@@ -6,7 +6,6 @@ sudo pacman -S --needed --noconfirm \
   {{ . }} \
 {{ end }}
   
-
 {{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
 git clone https://aur.archlinux.org/paru.git
 cd paru
