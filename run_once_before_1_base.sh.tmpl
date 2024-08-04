@@ -11,4 +11,10 @@ sudo pacman -S --needed \
   rust-analyzer \
   starship \
   ttf-inconsolata-go-nerd
+
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+cd ..
+rm -rf paru
 {{ end -}}
