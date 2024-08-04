@@ -1,4 +1,4 @@
-{{ if not stat (joinPath .chezmoi.homeDir ".gitconfig") -}}
+{{ if not stat joinPath .chezmoi.homeDir ".gitconfig" -}}
 [user]
   name = {{ .name }}
   email = {{ .email }}
