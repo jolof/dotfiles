@@ -1,4 +1,4 @@
-{{ if eq (stat (joinPath .chezmoi.homeDir ".gitconfig").size) 0 -}}
+{{ if eq (stat (joinPath .chezmoi.homeDir ".gitconfig").size) "0" -}}
 [user]
   name = {{ .name }}
   email = {{ .email }}
