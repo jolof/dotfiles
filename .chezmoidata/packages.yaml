@@ -15,7 +15,7 @@ packages:
   rust:
     - clang
     - mold
-    - sscache
+    - sccache
   hypr:
     - blueman
     - brightnessctl
