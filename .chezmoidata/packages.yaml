@@ -2,6 +2,7 @@ packages:
   base:
     - alacritty
     - base-devel
+    - curl
     - fzf
     - git
     - neovim
@@ -11,3 +12,27 @@ packages:
     - rust-analyzer
     - starship
     - ttf-inconsolata-go-nerd
+  hypr:
+    - blueman
+    - brightnessctl
+    - dropbox
+    - fuzzel
+    - hyprcursor
+    - hyprland
+    - idlehack
+    - nautilus
+    - nwg-bar
+    - network-manager-applet
+    - pavucontrol
+    - swaylock-effects-git
+    - swww
+    - ttf-arimo-nerd
+    - ttf-font-awesome
+    - ttf-roboto
+    - waybar
+    - waybar-module-pacman-updates-git
+    - wireplumber
+  rust:
+    - clang
+    - mold
+    - sscache
