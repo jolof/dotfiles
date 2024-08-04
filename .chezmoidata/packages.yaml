@@ -12,6 +12,10 @@ packages:
     - rust-analyzer
     - starship
     - ttf-inconsolata-go-nerd
+  rust:
+    - clang
+    - mold
+    - sscache
   hypr:
     - blueman
     - brightnessctl
@@ -32,7 +36,3 @@ packages:
     - waybar
     - waybar-module-pacman-updates-git
     - wireplumber
-  rust:
-    - clang
-    - mold
-    - sscache
