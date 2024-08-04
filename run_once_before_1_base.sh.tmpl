@@ -7,9 +7,11 @@ sudo pacman -S --needed \
   
 {{ end -}}
 
+{{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
 git clone https://aur.archlinux.org/paru.git
 cd paru
 makepkg -si
 cd ..
 rm -rf paru
+{{ end -}}
 {{ end -}}
