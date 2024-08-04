@@ -13,16 +13,16 @@
     "wlr/taskbar"
   ],
   "modules-center": [
-    "tray"
-  ],
-  "modules-right": [
     "mpris",
     "custom/updates",
     "battery",
     "bluetooth",
     "backlight",
     "pulseaudio",
-    "network",
+    "network"
+  ],
+  "modules-right": [
+    "tray",
     "idle_inhibitor",
     "clock",
     "custom/power_button"
@@ -50,8 +50,9 @@
     "on-click": "nwg-bar"
   },
   "bluetooth": {
+    "format": "",
+    "format-connected": "󰂯",
     "format-connected-battery": "{icon}",
-    "format-disabled": "󰂲",
     "format-icons": [
       "<span color='#ee3508'>󰤾</span>",
       "<span color='#eecd08'>󰤿</span>",
@@ -64,7 +65,7 @@
       "󰥆",
       "󰥈",
     ],
-    "tooltip-format": "{device_alias}",
+    "tooltip-connected": "{device_alias}",
     "tooltip-connected-battery": "{device_alias} ({device_battery_percentage}%)",
     "on-click": "blueman-manager"
   },
