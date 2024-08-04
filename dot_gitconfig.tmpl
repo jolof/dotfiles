@@ -4,9 +4,9 @@
   email = {{ .email }}
 {{ if .bitwarden -}}
   signingkey = ~/.ssh/id_ed25519.pub
-{{ end -}}
 [commit]
   gpgsign = true
 [gpg]
   format = ssh
+{{ end -}}
 {{ end -}}
