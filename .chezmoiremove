@@ -1,0 +1,3 @@
+{{ if not .hypr }}
+private_dot_config/hypr
+{{ end }}
