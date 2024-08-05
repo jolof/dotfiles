@@ -6,7 +6,7 @@ sudo pacman -S --needed --noconfirm \
   {{ . }} \
 {{ end }}
   
-{{ if eq .profile "Desktop" -}}
+{{ if eq .profile "desktop" -}}
 sudo pacman -S --needed --noconfirm \
 {{ range .packages.base.desktop -}}
   {{ . }} \

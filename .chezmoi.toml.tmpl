@@ -1,12 +1,12 @@
 {{ $name := promptStringOnce . "name" "Name" -}}
 {{ $email := promptStringOnce . "email" "Email" -}}
 {{ $bitwarden := promptBoolOnce . "bitwarden" "Import secrets from Bitwarden" true -}}
-{{ $profile := promptChoiceOnce . "profile" "Installation profile" (list "Desktop" "Console") "Desktop" -}}
+{{ $profile := promptChoiceOnce . "profile" "Installation profile" (list "desktop" "console") "desktop" -}}
 {{ $hypr := promptBoolOnce . "hypr" "Install and setup Hyprland" false -}}
 
 [data]
   bitwarden = {{ $bitwarden }}
-  profile = {{ $profile }}
+  profile = {{ $profile | quote }}
   hypr = {{ $hypr }}
   name = {{ $name | quote }}
   email = {{ $email | quote }}
