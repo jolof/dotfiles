@@ -10,8 +10,6 @@ packages:
     - neovim
     - pacman-contrib
     - ripgrep
-    - rust
-    - rust-analyzer
     - sccache
     - starship
     - ttf-inconsolata-go-nerd
