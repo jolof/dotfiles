@@ -1,6 +1,14 @@
 {{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
+{{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si --noconfirm
+cd ..
+rm -rf paru
+{{ end -}}
+
 paru -S --needed --noconfirm \
 {{ range .packages.hypr -}}
   {{ . }} \

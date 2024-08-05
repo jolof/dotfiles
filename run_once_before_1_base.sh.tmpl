@@ -13,18 +13,10 @@ sudo pacman -S --needed --noconfirm \
 {{ end }}
 {{ end -}}
   
-{{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si --noconfirm
-cd ..
-rm -rf paru
-
 curl --proto '=https' --tlsv1.3 -sSf https://sh.rustup.rs -o rustup.sh
 echo
 echo "Review rustup.sh before changing permissions and running the script:"
 echo "$ chmod +x rustup.sh"
 echo "$ ./rustup.sh"
 echo
-{{ end -}}
 {{ end -}}
