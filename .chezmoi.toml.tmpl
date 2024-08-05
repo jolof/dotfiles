@@ -1,12 +1,10 @@
 {{ $name := promptStringOnce . "name" "Name" -}}
 {{ $email := promptStringOnce . "email" "Email" -}}
 {{ $bitwarden := promptBoolOnce . "bitwarden" "Import secrets from Bitwarden" true -}}
-{{ $rust := promptBoolOnce . "rust" "Install and setup Rust" true -}}
 {{ $hypr := promptBoolOnce . "hypr" "Install and setup Hyprland" false -}}
 
 [data]
   name = {{ $name | quote }}
   email = {{ $email | quote }}
   bitwarden = {{ $bitwarden }}
-  rust = {{ $rust }}
   hypr = {{ $hypr }}

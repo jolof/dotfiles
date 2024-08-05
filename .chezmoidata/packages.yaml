@@ -2,20 +2,19 @@ packages:
   base:
     - alacritty
     - base-devel
+    - clang
     - curl
     - fzf
     - git
+    - mold
     - neovim
     - pacman-contrib
     - ripgrep
     - rust
     - rust-analyzer
+    - sccache
     - starship
     - ttf-inconsolata-go-nerd
-  rust:
-    - clang
-    - mold
-    - sccache
   hypr:
     - blueman
     - brightnessctl
