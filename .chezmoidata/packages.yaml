@@ -1,18 +1,20 @@
 packages:
   base:
-    - alacritty
-    - base-devel
-    - clang
-    - curl
-    - fzf
-    - git
-    - mold
-    - neovim
-    - pacman-contrib
-    - ripgrep
-    - sccache
-    - starship
-    - ttf-inconsolata-go-nerd
+    console:
+      - base-devel
+      - clang
+      - curl
+      - fzf
+      - git
+      - mold
+      - neovim
+      - pacman-contrib
+      - ripgrep
+      - sccache
+    desktop:
+      - alacritty
+      - starship
+      - ttf-inconsolata-go-nerd
   hypr:
     - blueman
     - brightnessctl

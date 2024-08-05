@@ -2,7 +2,13 @@
 #!/bin/bash
 
 sudo pacman -S --needed --noconfirm \
-{{ range .packages.base -}}
+{{ range .packages.base.console -}}
+  {{ . }} \
+{{ end }}
+  
+{{ if eq .profile "Desktop" -}}
+sudo pacman -S --needed --noconfirm \
+{{ range .packages.base.desktop -}}
   {{ . }} \
 {{ end }}
   
