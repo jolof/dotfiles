@@ -14,6 +14,7 @@ packages:
     desktop:
       - alacritty
       - starship
+      - ttf-font-nerd
       - ttf-inconsolata-go-nerd
   hypr:
     - blueman
