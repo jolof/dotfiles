@@ -113,18 +113,20 @@ tooltip label{
   padding-bottom: 10px;
 }
 #pulseaudio-slider slider, #backlight-slider slider {
-  box-shadow: 3px 3px 3px @bg_main;
-  border-radius: 10px;
-  background: white;
+  min-height: 0px;
+  min-width: 0px;
+  opacity: 0;
+  box-shadow: none;
+  background-image: none;
 }
 #pulseaudio-slider trough, #backlight-slider trough {
   min-height: 40px;
-  min-width: 3px;
-  border-radius: 3px;
+  min-width: 2px;
+  border-radius: 2px;
   background: @bg_hover;
 }
 #pulseaudio-slider highlight, #backlight-slider highlight {
   background: white;
-  border-radius: 3px;
+  border-radius: 2px;
 }
 {{ end -}}
