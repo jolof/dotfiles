@@ -106,8 +106,13 @@ return {
       {
         ",xQ",
         "<cmd>Trouble qflist toggle<cr>",
-        desc = "Quickfix List (Trouble)",
-      },
+        desc = "Quickfix List (Trouble)"
+      }
     }
+  },
+
+  {
+    'rodjek/vim-puppet',
+    ft = { "puppet" }
   }
 }
