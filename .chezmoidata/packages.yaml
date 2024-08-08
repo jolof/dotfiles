@@ -21,6 +21,7 @@ packages:
     - brightnessctl
     - dropbox
     - fuzzel
+    - grim
     - hyprcursor
     - hyprland
     - idlehack
@@ -28,6 +29,8 @@ packages:
     - nwg-bar
     - network-manager-applet
     - pavucontrol
+    - slurp
+    - swappy
     - swaylock-effects-git
     - swww
     - ttf-arimo-nerd
