@@ -176,9 +176,9 @@ bind = $mainMod, C, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dm
 bindl = , switch:Lid Switch, exec, swaylock
 bind = , XF86PowerOff, exec, swaylock
 
-layerrule = blur, launcher
-#layerrule = blur, notifications
-layerrule = blur, gtk-layer-shell
+layerrule = animation popin, launcher
+layerrule = animation slide, notifications
+layerrule = dimaround, gtk-layer-shell
 layerrule = blur, waybar
 windowrule = opacity 0.90, blueman-manager
 windowrule = opacity 0.90, pavucontrol
