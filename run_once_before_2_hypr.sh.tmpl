@@ -1,29 +1,17 @@
 {{ if (and .hypr (eq .chezmoi.osRelease.id "arch")) -}}
 #!/bin/bash
 
-sudo pacman -S --needed \
-  base-devel \
-  blueman \
-  brightnessctl \
-  fuzzel \
-  git \
-  hyprcursor \
-  hyprland \
-  nautilus \
-  network-manager-applet \
-  pacman-contrib \
-  pavucontrol \
-  swww \
-  ttf-arimo-nerd \
-  ttf-font-awesome \
-  ttf-roboto \
-  waybar \
-  wireplumber
+{{ if not (stat (joinPath "/" "usr" "bin" "paru")) -}}
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si --noconfirm
+cd ..
+rm -rf paru
+{{ end -}}
 
-paru -S --needed \
-  dropbox \
-  idlehack \
-  nwg-bar \
-  swaylock-effects-git \
-  waybar-module-pacman-updates-git
+paru -S --needed --noconfirm \
+{{ range .packages.hypr -}}
+  {{ . }} \
+{{ end }}
+  
 {{ end -}}

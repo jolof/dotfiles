@@ -1,0 +1,4 @@
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+. "$HOME/.cargo/env"
+. <(rustup completions bash)
+. <(rustup completions bash cargo)

@@ -1,20 +1,24 @@
 {{ if eq .chezmoi.osRelease.id "arch" -}}
 #!/bin/bash
 
-sudo pacman -S --needed \
-  alacritty \
-  fzf \
-  git \
-  neovim \
-  ripgrep \
-  rust \
-  rust-analyzer \
-  starship \
-  ttf-inconsolata-go-nerd
-
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si
-cd ..
-rm -rf paru
+sudo pacman -S --needed --noconfirm \
+{{ range .packages.base.console -}}
+  {{ . }} \
+{{ end }}
+  
+{{ if eq .profile "desktop" -}}
+sudo pacman -S --needed --noconfirm \
+{{ range .packages.base.desktop -}}
+  {{ . }} \
+{{ end }}
+{{ end -}}
+  
+{{ if not (stat (joinPath .chezmoi.homeDir ".cargo" "bin" "rustup")) -}}
+curl --proto '=https' --tlsv1.3 -sSf https://sh.rustup.rs -o rustup.sh
+echo
+echo "Review rustup.sh before changing permissions and running the script:"
+echo "$ chmod +x rustup.sh"
+echo "$ ./rustup.sh --no-modify-path"
+echo
+{{ end -}}
 {{ end -}}

@@ -1,0 +1,44 @@
+packages:
+  base:
+    console:
+      - base-devel
+      - clang
+      - curl
+      - fzf
+      - git
+      - mold
+      - neovim
+      - pacman-contrib
+      - ripgrep
+      - sccache
+    desktop:
+      - alacritty
+      - gcr-4
+      - gnome-keyring
+      - libsecret
+      - starship
+      - ttf-font-nerd
+      - ttf-inconsolata-go-nerd
+  hypr:
+    - blueman
+    - brightnessctl
+    - dropbox
+    - fuzzel
+    - grim
+    - hyprcursor
+    - hyprland
+    - idlehack
+    - nautilus
+    - nwg-bar
+    - network-manager-applet
+    - pavucontrol
+    - slurp
+    - swappy
+    - swaylock-effects-git
+    - swww
+    - ttf-arimo-nerd
+    - ttf-font-awesome
+    - ttf-roboto
+    - waybar
+    - waybar-module-pacman-updates-git
+    - wireplumber

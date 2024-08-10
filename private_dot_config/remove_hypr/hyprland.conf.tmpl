@@ -15,7 +15,6 @@ exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESK
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = nm-applet
 exec-once = blueman-applet
-exec-once = firewall-applet
 exec-once = dropbox
 exec-once = tuxedo-control-center --tray
 exec-once = wl-paste --type text --watch cliphist store
@@ -44,12 +43,12 @@ decoration {
     rounding = 10
 
     active_opacity = 1.0
-    inactive_opacity = 1.0
+    inactive_opacity = 0.75
 
     drop_shadow = true
     shadow_range = 4
     shadow_render_power = 3
-    col.shadow = rgba(1a1a1aee)
+    col.shadow = rgba(1a1a1ac0)
 
     blur {
         enabled = true
@@ -177,9 +176,9 @@ bind = $mainMod, C, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dm
 bindl = , switch:Lid Switch, exec, swaylock
 bind = , XF86PowerOff, exec, swaylock
 
-layerrule = blur, launcher
-#layerrule = blur, notifications
-#layerrule = blur, gtk-layer-shell
+layerrule = animation popin, launcher
+layerrule = animation slide, notifications
+layerrule = dimaround, gtk-layer-shell
 layerrule = blur, waybar
 windowrule = opacity 0.90, blueman-manager
 windowrule = opacity 0.90, pavucontrol
@@ -192,4 +191,5 @@ bind = ALT, tab, cyclenext,
 bind = ALT, tab, bringactivetotop,
 
 bind = $mainMod, BackSpace, exec, nwg-bar
+bind = , Print, exec, grim -g "$(slurp)" - | swappy -f -
 {{ end -}}
