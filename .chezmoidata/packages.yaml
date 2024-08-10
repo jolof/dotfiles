@@ -13,6 +13,9 @@ packages:
       - sccache
     desktop:
       - alacritty
+      - gcr-4
+      - gnome-keyring
+      - libsecret
       - starship
       - ttf-font-nerd
       - ttf-inconsolata-go-nerd
