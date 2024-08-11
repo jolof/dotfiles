@@ -34,6 +34,7 @@ packages:
     - nwg-bar
     - network-manager-applet
     - pavucontrol
+    - polkit-gnome
     - slurp
     - swappy
     - swaylock-effects-git
