@@ -13,6 +13,7 @@ packages:
       - sccache
     desktop:
       - alacritty
+      - firefox
       - gcr-4
       - gnome-keyring
       - libsecret
@@ -28,6 +29,7 @@ packages:
     - hyprcursor
     - hyprland
     - idlehack
+    - inotify-tools
     - nautilus
     - nwg-bar
     - network-manager-applet
