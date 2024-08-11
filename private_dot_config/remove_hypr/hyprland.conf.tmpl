@@ -83,7 +83,7 @@ master {
 
 misc { 
     force_default_wallpaper = 0
-    disable_hyprland_logo = true
+    disable_hyprland_logo = false
 }
 
 input {
@@ -192,4 +192,5 @@ bind = ALT, tab, bringactivetotop,
 
 bind = $mainMod, BackSpace, exec, nwg-bar
 bind = , Print, exec, grim -g "$(slurp)" - | swappy -f -
+bindr = $mainMod, SUPER_L, exec, pkill fuzzel || fuzzel
 {{ end -}}
