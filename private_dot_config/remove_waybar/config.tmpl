@@ -19,7 +19,8 @@
     "bluetooth",
     "backlight",
     "pulseaudio",
-    "network"
+    "network",
+    "temperature"
   ],
   "modules-right": [
     "backlight/slider",
@@ -29,6 +30,17 @@
     "clock",
     "custom/power_button"
   ],
+  "temperature": {
+    "critical-threshold": 70,
+    "format": "{icon}",
+    "format-critical": "<span color='#ee3508'></span>",
+    "format-icons": [
+      "",
+      "",
+      ""
+    ],
+    "tooltip-format": "{temperatureC} °C"
+  },
   "pulseaudio/slider": {
     "orientation": "vertical",
     "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",

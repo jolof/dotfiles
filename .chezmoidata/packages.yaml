@@ -30,15 +30,17 @@ packages:
     - hyprland
     - idlehack
     - inotify-tools
+    - mako
     - nautilus
-    - nwg-bar
     - network-manager-applet
+    - nwg-bar
     - pavucontrol
     - pipewire-audio
     - pipewire-pulse
     - polkit-gnome
     - slurp
     - swappy
+    - swayidle
     - swaylock-effects-git
     - swww
     - ttf-arimo-nerd
