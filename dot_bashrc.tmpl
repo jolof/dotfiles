@@ -8,5 +8,5 @@ export GPG_TTY=$(tty)
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gcr/ssh
 
 {{ if eq .profile "desktop" -}}
-eval "$(starship init bash)"
+[[ $(tty) =~ "pts" ]] && eval "$(starship init bash)"
 {{ end -}}
