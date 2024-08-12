@@ -11,6 +11,7 @@ sudo pacman -S --needed --noconfirm \
 {{ range .packages.base.desktop -}}
   {{ . }} \
 {{ end }}
+systemctl --user enable --now gcr-ssh-agent.socket
 {{ end -}}
   
 {{ if not (stat (joinPath .chezmoi.homeDir ".cargo" "bin" "rustup")) -}}

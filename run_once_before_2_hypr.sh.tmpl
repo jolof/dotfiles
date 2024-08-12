@@ -12,6 +12,10 @@ rm -rf paru
 paru -S --needed --noconfirm \
 {{ range .packages.hypr -}}
   {{ . }} \
+{{ end -}}
+{{ if (or (eq .chezmoi.hostname "tux") (eq .chezmoi.hostname "ryz")) -}}
+  tuxedo-driver-dkms \
+  tuxedo-control-center-bin \
 {{ end }}
   
 {{ end -}}
