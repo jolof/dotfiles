@@ -175,7 +175,8 @@ bind = $mainMod, V, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dm
 bind = $mainMod, C, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dmenu | cliphist delete
 
 bindl = , switch:Lid Switch, exec, swaylock
-bind = , XF86PowerOff, exec, swaylock
+bind = , XF86PowerOff, exec, ~/bin/suspend.sh
+bind = , XF86Sleep, exec, ~/bin/suspend.sh
 
 layerrule = animation popin, launcher
 layerrule = animation slide, notifications
