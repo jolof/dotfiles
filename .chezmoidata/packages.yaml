@@ -27,7 +27,9 @@ packages:
     - fuzzel
     - grim
     - hyprcursor
+    - hypridle
     - hyprland
+    - hyprlock
     - idlehack
     - inotify-tools
     - mako
@@ -40,8 +42,6 @@ packages:
     - polkit-gnome
     - slurp
     - swappy
-    - swayidle
-    - swaylock-effects-git
     - swww
     - ttf-arimo-nerd
     - ttf-font-awesome

@@ -1,15 +1,19 @@
 {{ if .hypr -}}
+{{ if eq .chezmoi.hostname "ryz" -}}
+monitor=eDP-1,1920x1200@120,auto,1
+{{ else -}}
 monitor=,preferred,auto,1
+{{ end -}}
 
 $terminal = alacritty
 $fileManager = nautilus
 $menu = fuzzel
-$lockScreen = swaylock -f -c 000000
+$lockScreen = hyprlock
 
 exec-once = swww-daemon
-exec-once = ~/bin/swww.sh ~/Dropbox/Wallpapers
+exec-once = ~/bin/swww.sh ~/Pictures/Wallpapers
 exec-once = ~/bin/waybar.sh
-exec-once = ~/bin/idle.sh
+exec-once = hypridle
 exec-once = /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec-once = systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 exec-once = dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -160,6 +164,7 @@ bindm = $mainMod, mouse:272, movewindow
 bindm = $mainMod, mouse:273, resizewindow
 
 windowrulev2 = suppressevent maximize, class:.*
+windowrulev2 = idleinhibit focus, class:^(firefox|Chromium)$
 
 bindl = , XF86AudioPlay, exec, playerctl play-pause
 bindl = , XF86AudioPrev, exec, playerctl previous
@@ -174,9 +179,9 @@ bindle = ,XF86MonBrightnessDown, exec, brightnessctl set '12.75-'
 bind = $mainMod, V, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dmenu | cliphist decode | wl-copy
 bind = $mainMod, C, exec, pkill fuzzel || cliphist list | fuzzel --no-fuzzy --dmenu | cliphist delete
 
-bindl = , switch:Lid Switch, exec, swaylock
-bind = , XF86PowerOff, exec, ~/bin/suspend.sh
-bind = , XF86Sleep, exec, ~/bin/suspend.sh
+bindl = , switch:Lid Switch, exec, systemctl suspend
+bind = , XF86PowerOff, exec, nwg-bar
+bind = , XF86Sleep, exec, systemctl suspend
 
 layerrule = animation popin, launcher
 layerrule = animation slide, notifications
